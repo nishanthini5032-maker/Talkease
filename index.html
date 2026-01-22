@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkEase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+
+    <!-- Authentication -->
+    <div id="auth">
+        <h1>Welcome to TalkEase</h1>
+
+        <div class="auth-options">
+            <button onclick="showLogin()">Login</button>
+            <button onclick="showSignup()">Sign Up</button>
+        </div>
+
+        <div id="login" class="auth-form hidden">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="goBack()">Back</button>
+        </div>
+
+        <div id="signup" class="auth-form hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button onclick="signup()">Sign Up</button>
+            <button onclick="goBack()">Back</button>
+        </div>
+    </div>
+
+    <!-- Category -->
+    <div id="category" class="hidden">
+        <h2>Select Category</h2>
+
+        <div class="category-options">
+            <button onclick="selectCategory('People')">People</button>
+            <button onclick="selectCategory('Food')">Food</button>
+            <button onclick="selectCategory('Animals')">Animals</button>
+        </div>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Pictures -->
+    <div id="pictures" class="hidden">
+        <h2>Select Picture</h2>
+        <div id="picture-list"></div>
+        <button onclick="goBackToCategory()">Back</button>
+    </div>
+
+    <!-- Sentence -->
+    <div id="sentence-formation" class="hidden">
+        <h2>Your Sentence</h2>
+        <div id="sentence"></div>
+        <button onclick="playSentence()">Play</button>
+        <button onclick="clearSentence()">Clear</button>
+        <button onclick="goBackToPictures()">Back</button>
+    </div>
+
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
